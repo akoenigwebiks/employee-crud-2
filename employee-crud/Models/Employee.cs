@@ -1,19 +1,19 @@
 ﻿namespace employee_crud.Models
 {
-    public class UserForm
+    public record Address(string StreetName, string City, string HouseNumber);
+
+    public class EmployeeModel
     {
         public string ID { get; set; }
         public string Nat { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string PostalCode { get; set; }
+        public Address Address { get; set; }
         public GenderEnum Gender { get; set; }
         public bool HasCar { get; set; }
         public MaritalStatusEnum MaritalStatus { get; set; }
+        public DateOnly BirthDate { get; set; }
 
 
         public enum GenderEnum
@@ -30,20 +30,19 @@
             Widowed
         }
 
-        public UserForm()
+        public EmployeeModel()
         {
             // give default values to the properties
+            var address = new Address("Ibn Gavirol", "Tel Aviv", "12345");
             ID = Guid.NewGuid().ToString();
             Nat = "";
             FirstName = "";
             LastName = "";
-            Email = "";
             PhoneNumber = "";
-            Address = "";
-            City = "";
-            PostalCode = "";
+            Address = address;
             MaritalStatus = MaritalStatusEnum.Single;
             Gender = GenderEnum.Male;
+            BirthDate = new DateOnly(2000, 1, 1);
         }
 
         // Method to validate Israeli ID number based on the algorithm provided

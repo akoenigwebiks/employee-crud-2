@@ -30,23 +30,22 @@
         {
             label_mainTitle = new Label();
             label_firstName = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBox_firstName = new TextBox();
+            textBox_nat = new TextBox();
             label_nat = new Label();
-            textBox3 = new TextBox();
+            textBox_lastName = new TextBox();
             label_lastName = new Label();
-            textBox4 = new TextBox();
             label_dob = new Label();
-            textBox5 = new TextBox();
+            textBox_id = new TextBox();
             label_id = new Label();
             groupBox_gender = new GroupBox();
-            radioButton_genderMale = new RadioButton();
             radioButton_genderFemale = new RadioButton();
+            radioButton_genderMale = new RadioButton();
             groupBox_status = new GroupBox();
-            radioButton_status_married = new RadioButton();
-            radioButton_status_single = new RadioButton();
             radioButto_status_widowed = new RadioButton();
             radioButton_status_divorced = new RadioButton();
+            radioButton_status_married = new RadioButton();
+            radioButton_status_single = new RadioButton();
             pictureBox_face = new PictureBox();
             button_nav_next = new Button();
             button_navs_prev = new Button();
@@ -54,19 +53,20 @@
             label_AddressStreetNumber = new Label();
             textBox_AddressCity = new TextBox();
             label_AddressCity = new Label();
-            textBox9 = new TextBox();
+            textBox_phoneNumber = new TextBox();
             label_phone_landline = new Label();
             textBox_AddressStreetName = new TextBox();
             label_AddressStreetName = new Label();
-            textBox11 = new TextBox();
+            textBox_mobileNumber = new TextBox();
             label_phone_mobile = new Label();
             groupBox_phone = new GroupBox();
             groupBox_address = new GroupBox();
             button1 = new Button();
             button2 = new Button();
-            button_curd_create = new Button();
+            button_crud_create = new Button();
             button_crud_update = new Button();
             button_crud_remove = new Button();
+            dateTimePicker_dob = new DateTimePicker();
             groupBox_gender.SuspendLayout();
             groupBox_status.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_face).BeginInit();
@@ -93,19 +93,19 @@
             label_firstName.TabIndex = 1;
             label_firstName.Text = "שם פרטי";
             // 
-            // textBox1
+            // textBox_firstName
             // 
-            textBox1.Location = new Point(340, 84);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            textBox_firstName.Location = new Point(340, 84);
+            textBox_firstName.Name = "textBox_firstName";
+            textBox_firstName.Size = new Size(100, 23);
+            textBox_firstName.TabIndex = 2;
             // 
-            // textBox2
+            // textBox_nat
             // 
-            textBox2.Location = new Point(190, 84);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
+            textBox_nat.Location = new Point(190, 84);
+            textBox_nat.Name = "textBox_nat";
+            textBox_nat.Size = new Size(100, 23);
+            textBox_nat.TabIndex = 4;
             // 
             // label_nat
             // 
@@ -116,12 +116,12 @@
             label_nat.TabIndex = 3;
             label_nat.Text = "תעודת זהות";
             // 
-            // textBox3
+            // textBox_lastName
             // 
-            textBox3.Location = new Point(481, 84);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 8;
+            textBox_lastName.Location = new Point(481, 84);
+            textBox_lastName.Name = "textBox_lastName";
+            textBox_lastName.Size = new Size(100, 23);
+            textBox_lastName.TabIndex = 8;
             // 
             // label_lastName
             // 
@@ -132,13 +132,6 @@
             label_lastName.TabIndex = 7;
             label_lastName.Text = "שם משפחה";
             // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(625, 84);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 6;
-            // 
             // label_dob
             // 
             label_dob.AutoSize = true;
@@ -148,13 +141,13 @@
             label_dob.TabIndex = 5;
             label_dob.Text = "תאריך לידה";
             // 
-            // textBox5
+            // textBox_id
             // 
-            textBox5.Location = new Point(77, 84);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(65, 23);
-            textBox5.TabIndex = 10;
+            textBox_id.Location = new Point(77, 84);
+            textBox_id.Name = "textBox_id";
+            textBox_id.ReadOnly = true;
+            textBox_id.Size = new Size(65, 23);
+            textBox_id.TabIndex = 10;
             // 
             // label_id
             // 
@@ -176,6 +169,16 @@
             groupBox_gender.TabStop = false;
             groupBox_gender.Text = "מין";
             // 
+            // radioButton_genderFemale
+            // 
+            radioButton_genderFemale.AutoSize = true;
+            radioButton_genderFemale.Location = new Point(29, 69);
+            radioButton_genderFemale.Name = "radioButton_genderFemale";
+            radioButton_genderFemale.Size = new Size(53, 19);
+            radioButton_genderFemale.TabIndex = 1;
+            radioButton_genderFemale.Text = "נקבה";
+            radioButton_genderFemale.UseVisualStyleBackColor = true;
+            // 
             // radioButton_genderMale
             // 
             radioButton_genderMale.AutoSize = true;
@@ -189,16 +192,6 @@
             radioButton_genderMale.UseVisualStyleBackColor = true;
             radioButton_genderMale.CheckedChanged += radioButton_genderMale_CheckedChanged;
             // 
-            // radioButton_genderFemale
-            // 
-            radioButton_genderFemale.AutoSize = true;
-            radioButton_genderFemale.Location = new Point(29, 69);
-            radioButton_genderFemale.Name = "radioButton_genderFemale";
-            radioButton_genderFemale.Size = new Size(53, 19);
-            radioButton_genderFemale.TabIndex = 1;
-            radioButton_genderFemale.Text = "נקבה";
-            radioButton_genderFemale.UseVisualStyleBackColor = true;
-            // 
             // groupBox_status
             // 
             groupBox_status.Controls.Add(radioButto_status_widowed);
@@ -211,27 +204,6 @@
             groupBox_status.TabIndex = 12;
             groupBox_status.TabStop = false;
             groupBox_status.Text = "מצב משפחתי";
-            // 
-            // radioButton_status_married
-            // 
-            radioButton_status_married.AutoSize = true;
-            radioButton_status_married.Location = new Point(58, 69);
-            radioButton_status_married.Name = "radioButton_status_married";
-            radioButton_status_married.Size = new Size(45, 19);
-            radioButton_status_married.TabIndex = 1;
-            radioButton_status_married.Text = "נשוי";
-            radioButton_status_married.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_status_single
-            // 
-            radioButton_status_single.AutoSize = true;
-            radioButton_status_single.Checked = true;
-            radioButton_status_single.Location = new Point(57, 33);
-            radioButton_status_single.Name = "radioButton_status_single";
-            radioButton_status_single.Size = new Size(46, 19);
-            radioButton_status_single.TabIndex = 0;
-            radioButton_status_single.Text = "רווק";
-            radioButton_status_single.UseVisualStyleBackColor = true;
             // 
             // radioButto_status_widowed
             // 
@@ -252,6 +224,28 @@
             radioButton_status_divorced.TabIndex = 2;
             radioButton_status_divorced.Text = "גרוש";
             radioButton_status_divorced.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_status_married
+            // 
+            radioButton_status_married.AutoSize = true;
+            radioButton_status_married.Location = new Point(58, 69);
+            radioButton_status_married.Name = "radioButton_status_married";
+            radioButton_status_married.Size = new Size(45, 19);
+            radioButton_status_married.TabIndex = 1;
+            radioButton_status_married.Text = "נשוי";
+            radioButton_status_married.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_status_single
+            // 
+            radioButton_status_single.AutoSize = true;
+            radioButton_status_single.Checked = true;
+            radioButton_status_single.Location = new Point(57, 33);
+            radioButton_status_single.Name = "radioButton_status_single";
+            radioButton_status_single.Size = new Size(46, 19);
+            radioButton_status_single.TabIndex = 0;
+            radioButton_status_single.TabStop = true;
+            radioButton_status_single.Text = "רווק";
+            radioButton_status_single.UseVisualStyleBackColor = true;
             // 
             // pictureBox_face
             // 
@@ -319,12 +313,12 @@
             label_AddressCity.TabIndex = 20;
             label_AddressCity.Text = "עיר";
             // 
-            // textBox9
+            // textBox_phoneNumber
             // 
-            textBox9.Location = new Point(25, 101);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 19;
+            textBox_phoneNumber.Location = new Point(25, 101);
+            textBox_phoneNumber.Name = "textBox_phoneNumber";
+            textBox_phoneNumber.Size = new Size(100, 23);
+            textBox_phoneNumber.TabIndex = 19;
             // 
             // label_phone_landline
             // 
@@ -334,7 +328,6 @@
             label_phone_landline.Size = new Size(26, 15);
             label_phone_landline.TabIndex = 18;
             label_phone_landline.Text = "נייח";
-            label_phone_landline.Click += label4_Click;
             // 
             // textBox_AddressStreetName
             // 
@@ -352,12 +345,12 @@
             label_AddressStreetName.TabIndex = 16;
             label_AddressStreetName.Text = "רחוב";
             // 
-            // textBox11
+            // textBox_mobileNumber
             // 
-            textBox11.Location = new Point(25, 47);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
-            textBox11.TabIndex = 27;
+            textBox_mobileNumber.Location = new Point(25, 47);
+            textBox_mobileNumber.Name = "textBox_mobileNumber";
+            textBox_mobileNumber.Size = new Size(100, 23);
+            textBox_mobileNumber.TabIndex = 27;
             // 
             // label_phone_mobile
             // 
@@ -370,9 +363,9 @@
             // 
             // groupBox_phone
             // 
-            groupBox_phone.Controls.Add(textBox11);
+            groupBox_phone.Controls.Add(textBox_mobileNumber);
             groupBox_phone.Controls.Add(label_phone_mobile);
-            groupBox_phone.Controls.Add(textBox9);
+            groupBox_phone.Controls.Add(textBox_phoneNumber);
             groupBox_phone.Controls.Add(label_phone_landline);
             groupBox_phone.Location = new Point(340, 145);
             groupBox_phone.Name = "groupBox_phone";
@@ -420,17 +413,18 @@
             button2.Text = "חיפוש עובד לפי קוד";
             button2.UseVisualStyleBackColor = false;
             // 
-            // button_curd_create
+            // button_crud_create
             // 
-            button_curd_create.BackColor = Color.DarkCyan;
-            button_curd_create.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            button_curd_create.ForeColor = Color.Cornsilk;
-            button_curd_create.Location = new Point(256, 378);
-            button_curd_create.Name = "button_curd_create";
-            button_curd_create.Size = new Size(87, 37);
-            button_curd_create.TabIndex = 31;
-            button_curd_create.Text = "חדש";
-            button_curd_create.UseVisualStyleBackColor = false;
+            button_crud_create.BackColor = Color.DarkCyan;
+            button_crud_create.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            button_crud_create.ForeColor = Color.Cornsilk;
+            button_crud_create.Location = new Point(256, 378);
+            button_crud_create.Name = "button_crud_create";
+            button_crud_create.Size = new Size(87, 37);
+            button_crud_create.TabIndex = 31;
+            button_crud_create.Text = "חדש";
+            button_crud_create.UseVisualStyleBackColor = false;
+            button_crud_create.Click += button_crud_create_Click;
             // 
             // button_crud_update
             // 
@@ -456,14 +450,23 @@
             button_crud_remove.Text = "מחיקה";
             button_crud_remove.UseVisualStyleBackColor = false;
             // 
+            // dateTimePicker_dob
+            // 
+            dateTimePicker_dob.Format = DateTimePickerFormat.Short;
+            dateTimePicker_dob.Location = new Point(625, 84);
+            dateTimePicker_dob.Name = "dateTimePicker_dob";
+            dateTimePicker_dob.Size = new Size(100, 23);
+            dateTimePicker_dob.TabIndex = 34;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 596);
+            Controls.Add(dateTimePicker_dob);
             Controls.Add(button_crud_remove);
             Controls.Add(button_crud_update);
-            Controls.Add(button_curd_create);
+            Controls.Add(button_crud_create);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(groupBox_address);
@@ -473,15 +476,14 @@
             Controls.Add(pictureBox_face);
             Controls.Add(groupBox_status);
             Controls.Add(groupBox_gender);
-            Controls.Add(textBox5);
+            Controls.Add(textBox_id);
             Controls.Add(label_id);
-            Controls.Add(textBox3);
+            Controls.Add(textBox_lastName);
             Controls.Add(label_lastName);
-            Controls.Add(textBox4);
             Controls.Add(label_dob);
-            Controls.Add(textBox2);
+            Controls.Add(textBox_nat);
             Controls.Add(label_nat);
-            Controls.Add(textBox1);
+            Controls.Add(textBox_firstName);
             Controls.Add(label_firstName);
             Controls.Add(label_mainTitle);
             Name = "Dashboard";
@@ -505,14 +507,13 @@
 
         private Label label_mainTitle;
         private Label label_firstName;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBox_firstName;
+        private TextBox textBox_nat;
         private Label label_nat;
-        private TextBox textBox3;
+        private TextBox textBox_lastName;
         private Label label_lastName;
-        private TextBox textBox4;
         private Label label_dob;
-        private TextBox textBox5;
+        private TextBox textBox_id;
         private Label label_id;
         private GroupBox groupBox_gender;
         private RadioButton radioButton_genderFemale;
@@ -529,18 +530,19 @@
         private Label label_AddressStreetNumber;
         private TextBox textBox_AddressCity;
         private Label label_AddressCity;
-        private TextBox textBox9;
+        private TextBox textBox_phoneNumber;
         private Label label_phone_landline;
         private TextBox textBox_AddressStreetName;
         private Label label_AddressStreetName;
-        private TextBox textBox11;
+        private TextBox textBox_mobileNumber;
         private Label label_phone_mobile;
         private GroupBox groupBox_phone;
         private GroupBox groupBox_address;
         private Button button1;
         private Button button2;
-        private Button button_curd_create;
+        private Button button_crud_create;
         private Button button_crud_update;
         private Button button_crud_remove;
+        private DateTimePicker dateTimePicker_dob;
     }
 }
