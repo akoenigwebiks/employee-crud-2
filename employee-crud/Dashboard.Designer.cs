@@ -61,8 +61,8 @@
             label_phone_mobile = new Label();
             groupBox_phone = new GroupBox();
             groupBox_address = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
+            button_findByNat = new Button();
+            button_findById = new Button();
             button_crud_create = new Button();
             button_crud_update = new Button();
             button_crud_remove = new Button();
@@ -389,29 +389,33 @@
             groupBox_address.TabStop = false;
             groupBox_address.Text = "כתובת";
             // 
-            // button1
+            // button_findByNat
             // 
-            button1.BackColor = Color.DarkCyan;
-            button1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            button1.ForeColor = Color.Cornsilk;
-            button1.Location = new Point(406, 514);
-            button1.Name = "button1";
-            button1.Size = new Size(185, 61);
-            button1.TabIndex = 29;
-            button1.Text = "חיפוש עובד לפי תז";
-            button1.UseVisualStyleBackColor = false;
+            button_findByNat.BackColor = Color.DarkCyan;
+            button_findByNat.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            button_findByNat.ForeColor = Color.Cornsilk;
+            button_findByNat.Location = new Point(406, 514);
+            button_findByNat.Name = "button_findByNat";
+            button_findByNat.Size = new Size(185, 61);
+            button_findByNat.TabIndex = 29;
+            button_findByNat.Tag = "nat";
+            button_findByNat.Text = "חיפוש עובד לפי תז";
+            button_findByNat.UseVisualStyleBackColor = false;
+            button_findByNat.Click += button_findBy_Click;
             // 
-            // button2
+            // button_findById
             // 
-            button2.BackColor = Color.DarkCyan;
-            button2.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            button2.ForeColor = Color.Cornsilk;
-            button2.Location = new Point(200, 514);
-            button2.Name = "button2";
-            button2.Size = new Size(185, 61);
-            button2.TabIndex = 30;
-            button2.Text = "חיפוש עובד לפי קוד";
-            button2.UseVisualStyleBackColor = false;
+            button_findById.BackColor = Color.DarkCyan;
+            button_findById.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            button_findById.ForeColor = Color.Cornsilk;
+            button_findById.Location = new Point(200, 514);
+            button_findById.Name = "button_findById";
+            button_findById.Size = new Size(185, 61);
+            button_findById.TabIndex = 30;
+            button_findById.Tag = "id";
+            button_findById.Text = "חיפוש עובד לפי קוד";
+            button_findById.UseVisualStyleBackColor = false;
+            button_findById.Click += button_findBy_Click;
             // 
             // button_crud_create
             // 
@@ -467,8 +471,8 @@
             Controls.Add(button_crud_remove);
             Controls.Add(button_crud_update);
             Controls.Add(button_crud_create);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(button_findById);
+            Controls.Add(button_findByNat);
             Controls.Add(groupBox_address);
             Controls.Add(groupBox_phone);
             Controls.Add(button_navs_prev);
@@ -538,8 +542,8 @@
         private Label label_phone_mobile;
         private GroupBox groupBox_phone;
         private GroupBox groupBox_address;
-        private Button button1;
-        private Button button2;
+        private Button button_findByNat;
+        private Button button_findById;
         private Button button_crud_create;
         private Button button_crud_update;
         private Button button_crud_remove;

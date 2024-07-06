@@ -1,5 +1,6 @@
 ﻿using employee_crud.Models;
 using employee_crud.Services;
+using Microsoft.VisualBasic;
 using static employee_crud.Models.EmployeeModel;
 
 namespace employee_crud
@@ -72,8 +73,7 @@ namespace employee_crud
 
         }
 
-
-        private void ResetFormControls(Control control,bool allowEdit)
+        private void ResetFormControls(Control control, bool allowEdit)
         {
             foreach (Control c in control.Controls)
             {
@@ -106,17 +106,20 @@ namespace employee_crud
                     default:
                         if (c.HasChildren)
                         {
-                            ResetFormControls(c,allowEdit); // Recursively reset controls within containers
+                            ResetFormControls(c, allowEdit); // Recursively reset controls within containers
                         }
                         break;
                 }
             }
         }
 
-
         private void ResetForm(bool allowEdit)
         {
             ResetFormControls(this, allowEdit);
+            textBox_id.ReadOnly = true;
+            radioButton_genderMale.Checked = true;
+            radioButton_status_single.Checked = true;
+            //dateTimePicker_dob.Value = DateTime.Now;
         }
 
         private void button_crud_create_Click(object sender, EventArgs e)
@@ -125,6 +128,22 @@ namespace employee_crud
             var result = MessageBox.Show("Are you sure you want to reset all fields?", "Confirm Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No) return;
             ResetForm(true);
+        }
+
+        private void button_findBy_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            var tag = btn.Tag;
+            string prompt = "Please enter your input:";
+            string title = "Input Required";
+            string defaultResponse = "Default text";
+
+            string userInput = Interaction.InputBox(prompt, title, defaultResponse);
+
+            if (!string.IsNullOrEmpty(userInput))
+            {
+                MessageBox.Show($"You entered: {userInput}->{tag}");
+            }
         }
     }
 }
