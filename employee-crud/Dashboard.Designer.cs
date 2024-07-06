@@ -190,7 +190,6 @@
             radioButton_genderMale.TabStop = true;
             radioButton_genderMale.Text = "זכר";
             radioButton_genderMale.UseVisualStyleBackColor = true;
-            radioButton_genderMale.CheckedChanged += radioButton_genderMale_CheckedChanged;
             // 
             // groupBox_status
             // 

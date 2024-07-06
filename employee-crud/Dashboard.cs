@@ -68,11 +68,6 @@ namespace employee_crud
             radioButto_status_widowed.Checked = employeeMaritalStatus == EmployeeModel.MaritalStatusEnum.Widowed;
         }
 
-        private void radioButton_genderMale_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ResetFormControls(Control control, bool allowEdit)
         {
             foreach (Control c in control.Controls)
